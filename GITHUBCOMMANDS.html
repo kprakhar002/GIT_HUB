@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  This html file contains all the git repo commandsand its deployed on the git hub server
+</head>
+
+<body>
+
+
+
+  <h1>GIT COMMANDS AND ITS USES:</h1>
+
+  <h2>1.Setting up Git :</h2>
+  <p>
+    git config --global user.name PrakharKumar
+
+    git config --global user.email kprakhar002@gmail.com
+
+    git init - initialises the empty repository
+  </p>
+
+
+  <h2>2.General GIT commands for the projects:</h2>
+  <p>
+    git status - will let you know what is the status of your file whether its being tracked by git or not.
+    git status -s (this will show the short status of the commits)
+
+    example
+
+    bholu@Prakhar-Kumar git_hub % git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+      index.html
+
+      nothing added to commit but untracked files present (use "git add" to track)
+
+
+      git add file_name - will send the file to the git staging area.git add —a (to add all the files to the staging
+      area of the git from the untracked stage)
+      NOTE- to start the git commit process one initial commit is required.
+      git commit
+
+  </p>
+
+  <h2>3.To add multiple files to git :</h2>
+
+  <p>
+    bholu@Prakhar-Kumar GIT_HUB % git status
+    On branch master
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+      about.html
+      contact.html
+      monument.html
+
+      nothing added to commit but untracked files present (use "git add" to track)
+      bholu@Prakhar-Kumar GIT_HUB % git add --a
+      bholu@Prakhar-Kumar GIT_HUB % git status
+      On branch master
+      Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+        new file: about.html
+        new file: contact.html
+        new file: monument.html
+
+        bholu@Prakhar-Kumar GIT_HUB %
+
+  </p>
+  <h2>4.Shortcut to add message while commiting:</h2>
+
+  <p>
+    git commit -m "New Index1.html added"
+    git commit -a -m “both adding and commiting file together”
+  </p>
+
+  <h2>5.GIT CHECKOUT - to match current changes in the files with the previous commited ones</h2>
+
+
+  <p>
+    git chechout -f (commnad to match all the files modified with the previous commited changes)
+  </p>
+
+  <h2>6.To check the log of the chnages in the files</h2>
+  <p>git log -p -2 (this will show the log of last 2 commits)</p>
+
+
+  <h2>7.Use of git diff command</h2>
+
+  <p>
+    git diff (compares working tree with the staged changes)
+    git diff —staged (compares staged changes with the last commit)
+  </p>
+
+  <h2>8.Removing staged and commited file from only staged area</h2>
+
+  <p>
+    git rm —cached file_name. (the file will still be there on the harddisk but will be removed from the staged area of
+    the git)
+    git rm file_name (the file will be deleted permanently from the harddisk and the staged area)
+
+  </p>
+
+  <h2>9. .GITIGNORE file can be used to ignore file patterns from root level or from all the locations in the project.
+    The patterns mentioned in the .gitignore file will not be addedc to the git and tracked.</h2>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>BRANCHES:</h2>
+
+  <p>
+    git branch (this command will list all the branches created and current active branch or working branch)
+    git branch new_branch1 (this command will create a new branch from the master branch but we will still be on master
+    branch)
+    git checkout new_branch1 (this command will let us work on the new branch created i.e new_branch1)
+
+    shortcut to create and switch to the new branch:
+    git checkout -b new_branch2
+
+  </p>
+
+  <h2>Steps to merge branches :</h2>
+
+  <p>
+    1. Navigate to the master branch as below :
+    git checkout master
+    2. use below command to merge the branches:
+    git merge new_branch1
+
+  </p>
+
+
+  <h2>PUSH PULL OF THE REPO CREATED ON TO THE GITHUB SERVER :</h2>
+
+  <p>
+    Create a remote github link where we need to deploy our repository and then use below command to add the url to our
+    repository created with alias name as origin:
+    git remote add origin https://github.com/kprakhar002/GIT_HUB.git
+
+    Now Push the branch to the github url(alias as origin) created using the below command:
+    git push origin master
+
+  </p>
+
+
+
+
+</body>
+
+</html>
